@@ -1,23 +1,21 @@
-//import the raect and reactdom libs
-import React from "react";
+//import the react and reactdom libs
 import ReactDOM from "react-dom";
 
-const getButton = () => {
-  return "ammar";
-};
+import CommentDetail from "./CommentDetail";
+import ApprovalCard from "./ApprovalCard";
 
-//create a react component
 const App = () => {
-  const buttonText = { text: "clickME" };
-  const style = { backgroundColor: "blue", color: "white" };
   return (
     <div>
-      <label style={style} className="label" htmlFor="name">
-        {" "}
-        {buttonText.text}
-      </label>
-      <input id="name" type="text"></input>
-      <button style={style}> {buttonText.text}</button>
+      <ApprovalCard>
+        <CommentDetail author="ammar" time="6:00" comment=" good good" />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail author="ali" time="7:00" comment=" very good" />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail author="ahmed" time="8:00" comment=" very very good" />
+      </ApprovalCard>
     </div>
   );
 };
